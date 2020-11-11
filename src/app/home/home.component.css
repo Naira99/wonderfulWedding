@@ -1,0 +1,179 @@
+    * {
+        /* margin: 0;
+    padding: 0; */
+        box-sizing: border-box;
+        font-family: "Dosis", sans-serif;
+    }
+    
+    .wedding_events {
+        background-color: #f8f9fa !important;
+    }
+    
+    h4 {
+        margin-bottom: .5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+    }
+    
+    span {
+        margin-bottom: 10px;
+    }
+    
+    .header_image {
+        background: url("../../assets/img/home-img.jpg") no-repeat center center;
+        background-size: cover;
+        background-position: 70%;
+        height: 100vh;
+        min-height: 480px;
+    }
+    
+    .header_image::before {
+        content: "";
+        background-color: rgba(245, 138, 119, 0.2);
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+        min-height: 480px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .name {
+        font-family: 'Great Vibes', cursive;
+        font-size: 70px;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        letter-spacing: 2px;
+    }
+    
+    .head {
+        font-family: 'Great Vibes', cursive;
+        font-size: 40px;
+        color: black;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        letter-spacing: 2px;
+    }
+    
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .name_card {
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+        color: black;
+    }
+    
+    .card-text {
+        color: #6c757d !important;
+    }
+    
+    .small_name {
+        font-family: 'Great Vibes', cursive;
+        font-size: 33px;
+        color: #fff;
+    }
+    
+    .header {
+        position: absolute;
+        top: 44px;
+        max-width: 600px;
+        text-align: center;
+        margin-left: 0;
+        z-index: 999;
+    }
+    
+    .image img {
+        max-height: 350px;
+        width: auto;
+    }
+    
+    .slide_image {
+        animation: myfirst 2s linear 2s infinite alternate;
+    }
+    
+    .slide {
+        margin: 15px 0px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .slide div {
+        width: 44px;
+        height: 4px;
+        background: grey;
+        cursor: pointer;
+    }
+    
+    .btn {
+        margin-right: 5px;
+    }
+    
+    .slide div:nth-child(2) {
+        margin-left: 17px;
+    }
+    
+    .images {
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: auto auto auto;
+    }
+    /*footer*/
+    
+    .bg_image {
+        background-image: url('../../assets/img/rsvp-img.jpg');
+        background-size: cover;
+        min-height: 500px;
+        position: relative;
+    }
+    
+    .bg_image::before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    label {
+        color: white;
+    }
+    
+    option {
+        background-color: lightgrey
+    }
+    
+    input,
+    select,
+    textarea {
+        background-color: rgba(222, 222, 222, 0.2);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        width: 100%;
+        padding: 4px;
+        border-radius: 4px;
+        outline: none;
+    }
+    
+    @keyframes myfirst {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .name {
+            font-size: 40px;
+        }
+    }
