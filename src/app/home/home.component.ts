@@ -1,25 +1,17 @@
 import { ViewChild } from '@angular/core';
 import { AfterViewInit, Component, ElementRef, OnInit,ChangeDetectorRef } from '@angular/core';
-
+import {FormGroup,FormControl,Validators,FormBuilder} from '@angular/forms';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  constructor(private ref: ChangeDetectorRef) {
-    console.log(ref);
-   }
-
-
-
-
-
-
-
-
-
-
+  submitForm:FormGroup;
+  submitted:boolean=false;
+  constructor(private formBuilder: FormBuilder) {}
+  
 
   image_array: string[] = [
 
@@ -86,7 +78,29 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.submitForm = new FormGroup({
+      name: new FormControl("", [Validators.required, Validators.maxLength(10)]),
+      email: new FormControl("", [Validators.required, Validators.email]),
+      message: new FormControl("", [Validators.required])
+    })
+
     this.getImage(0);
+    AOS.init();
   }
+
+get validForm(){
+  return this.submitForm.controls;
+}
+
+
+sendEmail(){
+
+  this.submitted=true;
+  console.log("sss",this.submitForm)
+  if (this.submitForm.invalid) {
+      return;
+    }
+ 
+}
 
 }
